@@ -6,30 +6,28 @@ using System.Threading.Tasks;
 
 namespace StackQueue
 {
-    class Stack
+    public class Queue
     {
         LinkedList linkedList;
-        public Stack()
+
+        public Queue()
         {
             linkedList = new LinkedList();
         }
-        public void Push(Node node)
+
+        public void Enqueue(Node node)
         {
-            linkedList.AddNode(node);
+            linkedList.AppendNode(node);
+
         }
-        public void Pop()
-        {
-            Console.WriteLine("");
-            linkedList.RemoveNode();
-        }
-        public void DisplayStack()
-        {
+        public void DisplayQueue()
+        {         
             linkedList.Display();
         }
         public void Top()
         {
             var val = linkedList.Head;
-            Console.WriteLine(val.data);
+            Console.WriteLine(val);
         }
     }
 }
