@@ -18,7 +18,11 @@ namespace StackQueue
         public void Enqueue(Node node)
         {
             linkedList.AppendNode(node);
-
+        }
+        public void Dequeue()
+        {
+            Console.WriteLine("");
+            linkedList.RemoveNode();
         }
         public void DisplayQueue()
         {         
