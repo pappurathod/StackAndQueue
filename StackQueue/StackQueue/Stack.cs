@@ -17,6 +17,11 @@ namespace StackQueue
         {
             linkedList.AddNode(node);
         }
+        public void Pop()
+        {
+            Console.WriteLine("");
+            linkedList.RemoveNode();
+        }
         public void DisplayStack()
         {
             //Console.WriteLine("Stack");

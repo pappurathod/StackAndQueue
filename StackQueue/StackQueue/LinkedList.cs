@@ -20,14 +20,22 @@ namespace StackQueue
         public void AddNode(Node node)
         {
             if (Head == null && Tail == null)
-            {
+            {               
                 Head = node;
-                Tail = node;
+                Tail = node;             
             }
             else
-            {
+            {  
                 node.next = Head;
                 Head = node;
+            }
+        }
+        public void RemoveNode()
+        {
+            while (Head != null)
+            {
+                Console.WriteLine("pop = {0}",Head.data);
+                Head = Head.next;
             }
         }
         public void Display()
@@ -35,7 +43,7 @@ namespace StackQueue
             Node temp = Head;
             if (temp == null)
             {
-                Console.WriteLine("empty");
+                Console.WriteLine("Now Stack is empty");
             }
             else
             {
